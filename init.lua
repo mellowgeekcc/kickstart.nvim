@@ -24,22 +24,22 @@ What is Kickstart?
 
   Kickstart.nvim is *not* a distribution.
 
-  Kickstart.nvim is a starting point for your own configuration.
-    The goal is that you can read every line of code, top-to-bottom, understand
+  kickstart.nvim is a starting point for your own configuration.
+    the goal is that you can read every line of code, top-to-bottom, understand
     what your configuration is doing, and modify it to suit your needs.
 
-    Once you've done that, you can start exploring, configuring and tinkering to
-    make Neovim your own! That might mean leaving Kickstart just the way it is for a while
-    or immediately breaking it into modular pieces. It's up to you!
+    once you've done that, you can start exploring, configuring and tinkering to
+    make neovim your own! that might mean leaving kickstart just the way it is for a while
+    or immediately breaking it into modular pieces. it's up to you!
 
-    If you don't know anything about Lua, I recommend taking some time to read through
-    a guide. One possible example which will only take 10-15 minutes:
+    if you don't know anything about lua, i recommend taking some time to read through
+    a guide. one possible example which will only take 10-15 minutes:
       - https://learnxinyminutes.com/docs/lua/
 
-    After understanding a bit more about Lua, you can use `:help lua-guide` as a
-    reference for how Neovim integrates Lua.
+    after understanding a bit more about lua, you can use `:help lua-guide` as a
+    reference for how neovim integrates lua.
     - :help lua-guide
-    - (or HTML version): https://neovim.io/doc/user/lua-guide.html
+    - (or html version): https://neovim.io/doc/user/lua-guide.html
 
 Kickstart Guide:
 
@@ -103,6 +103,9 @@ vim.o.number = true
 -- You can also add relative line numbers, to help with jumping.
 --  Experiment for yourself to see if you like it!
 vim.o.relativenumber = true
+
+-- Set the cursor to block and line
+vim.opt.guicursor = 'n-v-c-sm-i-ci-ve:block,r-cr-o:hor20'
 
 -- Enable mouse mode, can be useful for resizing splits for example!
 vim.o.mouse = 'a'
@@ -248,7 +251,7 @@ rtp:prepend(lazypath)
 require('lazy').setup({
   -- NOTE: Plugins can be added with a link (or for a github repo: 'owner/repo' link).
   'NMAC427/guess-indent.nvim', -- Detect tabstop and shiftwidth automatically
-
+  'ThePrimeagen/vim-be-good', -- game to train vim
   -- NOTE: Plugins can also be added by using a table,
   -- with the first argument being the link and the following
   -- keys can be used to configure plugin behavior/loading/etc.
